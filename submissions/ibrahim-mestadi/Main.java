@@ -1,5 +1,8 @@
-public class Main {
-    
+import java.io.*;
+import java.math.BigDecimal;
+import java.util.*;
+
+class Main {
     public record Product(String name, BigDecimal price) {}
     public record City(String name, List<Product> products) {}
 
@@ -40,7 +43,7 @@ public class Main {
         }
         Map.Entry<String, BigDecimal> cheapestCity = cityPrices.entrySet().stream().min(Map.Entry.comparingByValue()).get();
         City cheapestCityData = cities.get(cheapestCity.getKey());
-        List<Product> cheapestProducts = cheapestCityData.products().stream().sorted(Comparator.comparing(Product::price).thenComparing(Product::name)).limit(5).collect(Collectors.toList());
+        List<Product> cheapestProducts = cheapestCityData.products().stream().sorted(Comparator.comparing(Product::price).thenComparing(Product::name)).limit(5).toList();
         StringBuilder result = new StringBuilder();
         result.append(cheapestCity.getKey()).append(" ").append(cheapestCity.getValue()).append("\n");
         for (Product product : cheapestProducts) {
