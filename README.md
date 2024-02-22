@@ -77,6 +77,14 @@ Assist Adnan by writing a program, using any allowed language, to find the city 
 
 You can find an example of the input file [here](./input.txt). This file contains 1 million line to run your tests and validate your solution. The result contaning the correct answer from running the program against the 1M input file is saved in [this file](./output.txt)
 
+You can also use the script found at `gen.py` to generate arbitrarily large test cases similar to the ones that we will use to validate your submission on the blanat server.
+
+```
+python3 gen.py --rows <number_of_rows>
+```
+
+> Note that to generate the 1B row file, it will require a couple of minutes to generate and would take around `~22Gb` of disk space.
+
 ### INPUT
 Below are short examples for better understanding:
 
@@ -142,7 +150,13 @@ The challenge will run from the 19th of February 2024 until 29th of February 202
 
 ## Leaderboard
 
-> Coming soon
+| Username   | Avg Time (ms) | Median Time (ms) | Language | Humanized Time                |
+|------------|---------------|------------------|----------|-------------------------------|
+| NotAsheraf | 107811        | 107152           | rs       | 107.81 sec (≈ 1 min 47.81 sec) |
+| aboullaite | 368758        | 368167           | java     | 368.76 sec (≈ 6 min 8.76 sec)  |
+| sm3xy      | 903274        | 900806           | py       | 903.27 sec (≈ 15 min 3.27 sec) |
+
+We only list solutions with correct results that run within ~15 min. We unfortunately can't give feedbac on every submission and we invite you to read the full assignement.
 
 ## Prize
 
